@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+xcalib -clear
+xgamma -gamma 1.0

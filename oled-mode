@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+
+export DISPLAY=:0 
+
+
+/usr/bin/xcalib -clear 
+/usr/bin/xcalib -co 97 -a
+/usr/bin/xgamma -gamma 0.92
