@@ -51,4 +51,4 @@ Settings, then Keyboard, then Custom Shortcuts, then add a shortcut. Set the com
 
 ## License
 
-Use these however you like.
+MIT. See [LICENSE](LICENSE).
