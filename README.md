@@ -21,7 +21,33 @@ Tweaks screen contrast and gamma for a darker, easier-on-the-eyes display.
     ./oled-mode
     ./oled-reset
 
-To trigger them with a key combo, go to Settings, then Keyboard, then Custom Shortcuts, add a shortcut, and set the command to the full path of the script (for example `/home/youruser/workflow-scripts/oled-mode`).
+### warp-toggle
+
+Turns Cloudflare WARP on or off with one command and shows a desktop notification. Meant to be bound to a key combo.
+
+**Requires:** `cloudflare-warp` (provides `warp-cli`) and `libnotify-bin` (provides `notify-send`).
+
+**One-time setup** (after installing cloudflare-warp):
+
+    warp-cli registration new
+    warp-cli mode warp+doh
+
+The toggle only runs connect/disconnect, so the mode you set here stays saved.
+
+**Usage:**
+
+    chmod +x warp-toggle
+    ./warp-toggle
+
+Verify it works with WARP on:
+
+    curl https://www.cloudflare.com/cdn-cgi/trace | grep warp
+
+You should see `warp=on`.
+
+## Binding a script to a key combo
+
+Settings, then Keyboard, then Custom Shortcuts, then add a shortcut. Set the command to the full path of the script (for example `/home/youruser/workflow-scripts/warp-toggle`) and press your combo. Use the full path, because `~` often does not expand there.
 
 ## License
 

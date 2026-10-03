@@ -1,0 +1,10 @@
+#!/bin/bash
+# Toggle Cloudflare WARP on/off and show a desktop notification.
+# Requires: cloudflare-warp (warp-cli), libnotify-bin (notify-send)
+if warp-cli status | grep -q "Status update: Connected"; then
+    warp-cli disconnect
+    notify-send "WARP" "Disconnected"
+else
+    warp-cli connect
+    notify-send "WARP" "Connected"
+fi
